@@ -19,6 +19,7 @@ In HTML, each element is made up of 3 parts:
 The opening tag
 The closing tag
 The actual element
+
 You can learn more at the MDN Web Docs.
 
 Why should you learn HTML?

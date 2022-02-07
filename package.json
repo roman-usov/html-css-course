@@ -1,0 +1,23 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "This repo contains starter files and final code for all sections and projects contained in the course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roman-usov/html-css-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roman-usov/html-css-course/issues"
+  },
+  "homepage": "https://github.com/roman-usov/html-css-course#readme",
+  "dependencies": {
+    "liveserver": "^0.1.20",
+    "prettier": "^2.5.1"
+  }
+}

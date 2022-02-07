@@ -1,7 +1,6 @@
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -25,7 +24,7 @@ body {
 }
 
 .container {
-	width: 1200px;
+	width: 800px;
 	margin: 0 auto;
 }
 
@@ -45,7 +44,8 @@ aside {
 	background-color: #f7f7f7;
 	border-top: 5px solid #1098ad;
 	border-bottom: 5px solid #1098ad;
-	padding: 50px 40px;
+	padding: 50px 0;
+	width: 500px;
 }
 
 /* SMALLER ELEMENTS */
@@ -78,7 +78,6 @@ h4 {
 	font-size: 20px;
 	text-transform: uppercase;
 	text-align: center;
-	margin-bottom: 30px;
 }
 
 p {
@@ -110,6 +109,11 @@ li:first-child {
 	font-size: 16px;
 }
 
+#author {
+	font-style: italic;
+	font-size: 18px;
+}
+
 .related-author {
 	font-size: 18px;
 	font-weight: bold;
@@ -117,7 +121,6 @@ li:first-child {
 
 .related {
 	list-style: none;
-	margin-left: 0;
 }
 
 /* Styling links */
@@ -177,47 +180,4 @@ h2::after {
 	position: absolute;
 	top: -14px;
 	right: -26px;
-}
-
-/* FLOATS */
-
-.author-img {
-	float: left;
-	margin-bottom: 20px;
-}
-
-.author {
-	float: left;
-	font-style: italic;
-	font-size: 18px;
-	margin-left: 20px;
-	margin-top: 10px;
-}
-
-h1 {
-	float: left;
-}
-
-nav {
-	float: right;
-}
-
-.clearfix::after {
-	clear: both;
-	content: '';
-	display: block;
-}
-
-article {
-	width: 825px;
-	float: left;
-}
-
-aside {
-	width: 300px;
-	float: right;
-}
-
-footer {
-	clear: both;
 }

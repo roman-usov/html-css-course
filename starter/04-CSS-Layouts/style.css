@@ -4,8 +4,6 @@
 	box-sizing: border-box;
 }
 
-/* PAGE SECTIONS */
-
 body {
 	font-family: sans-serif;
 	color: #444;
@@ -13,10 +11,104 @@ body {
 	position: relative;
 }
 
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*Flexbox Related*/
+
+.main-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* .main-content {
+	display: flex;
+	gap: 75px;
+	margin-bottom: 60px;
+	align-items: flex-start;
+} */
+
+.author-container {
+	display: flex;
+	align-items: center;
+}
+
+.related-post {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+/* article {
+	flex: 1;
+}
+
+aside {
+	flex: 0 0 300px;
+} */
+
+
+/* CSS Grid Layout */
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	column-gap: 75px;
+	row-gap: 60px;
+	align-items: start;
+}
+
+.main-header {
+	/* grid-column: 1/ span 2; */
+	grid-column: 1 / -1;
+
+}
+
+aside {
+	/* align-self: start; */
+}
+
+footer {
+	grid-column: 1 / -1;
+}
+
+
+
+/* PAGE SECTIONS */
+
 .main-header {
 	background-color: #f7f7f7;
 	padding: 20px 40px;
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
+}
+
+nav {
+	font-size: 18px;
+}
+
+nav a:link {
+	margin-right: 30px;
+	display: inline-block;
+}
+
+nav a:link:last-child {
+	margin-right: 0;
+}
+
+
+.author-container {
+	margin-bottom: 15px;
+}
+
+.author {
+	margin-bottom: 0;
+}
+
+.author-img {
+	margin-right: 15px;
 }
 
 .post-img {
@@ -24,21 +116,12 @@ body {
 	height: auto;
 }
 
-.container {
-	width: 1200px;
-	margin: 0 auto;
-}
-
-nav {
-	font-size: 18px;
-}
-
 .post-header {
 	margin-bottom: 40px;
 }
 
 article {
-	margin-bottom: 60px;
+	/* margin-bottom: 60px; */
 }
 
 aside {
@@ -47,6 +130,7 @@ aside {
 	border-bottom: 5px solid #1098ad;
 	padding: 50px 40px;
 }
+
 
 /* SMALLER ELEMENTS */
 
@@ -62,10 +146,28 @@ h1 {
 	font-style: italic;
 }
 
+h1::first-letter {
+	font-style: normal;
+	margin-right: 5px;
+}
+
 h2 {
 	font-size: 40px;
 	margin-bottom: 60px;
 	position: relative;
+}
+
+h2::after {
+	content: 'TOP';
+	background-color: #ffe70e;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	padding: 5px 10px;
+	position: absolute;
+	top: -14px;
+	right: -26px;
 }
 
 h3 {
@@ -110,14 +212,24 @@ li:first-child {
 	font-size: 16px;
 }
 
-.related-author {
-	font-size: 18px;
-	font-weight: bold;
-}
-
 .related {
 	list-style: none;
 	margin-left: 0;
+}
+
+.related-author {
+	font-size: 14px;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+.related-link:link {
+	display: inline-block;
+	font-size: 17px;
+	font-weight: bold;
+	font-style: normal;
+	margin-bottom: 5px;
 }
 
 /* Styling links */
@@ -125,6 +237,11 @@ li:first-child {
 a:link {
 	color: #1098ad;
 	text-decoration: none;
+}
+
+a:active {
+	background-color: black;
+	font-style: italic;
 }
 
 a:visited {
@@ -137,21 +254,6 @@ a:hover {
 	text-decoration: underline dotted orangered;
 }
 
-a:active {
-	background-color: black;
-	font-style: italic;
-}
-
-nav a:link {
-	margin-right: 30px;
-	margin-top: 10px;
-	display: inline-block;
-}
-
-nav a:link:last-child {
-	margin-right: 0;
-}
-
 button {
 	font-size: 22px;
 	padding: 20px;
@@ -161,26 +263,10 @@ button {
 	right: 50px;
 }
 
-h1::first-letter {
-	font-style: normal;
-	margin-right: 5px;
-}
 
-h2::after {
-	content: 'TOP';
-	background-color: #ffe70e;
-	color: #000;
-	font-size: 16px;
-	font-weight: bold;
-	display: inline-block;
-	padding: 5px 10px;
-	position: absolute;
-	top: -14px;
-	right: -26px;
-}
 
 /* FLOATS */
-
+/* 
 .author-img {
 	float: left;
 	margin-bottom: 20px;
@@ -221,3 +307,4 @@ aside {
 footer {
 	clear: both;
 }
+ */

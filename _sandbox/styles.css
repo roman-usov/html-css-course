@@ -1,0 +1,20 @@
+.class3 {
+	font-size: 2rem;
+}
+
+.class4 {
+	background-color: blue;
+	height: 0;
+	padding-top: 100%; /* от ширины родителя, в нашем примере от ширины контейнера*/
+	position: relative;
+	/*fixed - относительно окна браузера*/
+}
+
+.class4-content {
+	background-color: green;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}

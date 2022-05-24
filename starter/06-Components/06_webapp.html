@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>App Layout</title>
+		<style>
+			/*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+
+			/* MAIN COLOR: #087f5b
+        GREY: #343a40
+      */
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			/* ------------------------ */
+			/* GENERAL STYLES */
+			/* ------------------------ */
+			body {
+				font-family: 'Inter', sans-serif;
+				color: #343a40;
+				line-height: 1;
+				font-size: 24px;
+				/* text-align: center; //works for simple text alignment */
+			}
+
+			.app {
+				width: 100vw;
+				height: 100vh;
+				display: grid;
+				grid-template-columns: 80px 400px 1fr 250px;
+				grid-template-rows: 80px 1fr;
+			}
+
+			.navbar {
+				background-color: #343a40;
+				color: #fff;
+				grid-row: 1/-1;
+				display: flex;
+				justify-content: center;
+			}
+
+			.controls {
+				grid-column: 2/-1;
+				display: flex;
+				background-color: #7048e8;
+				align-items: center;
+				gap: 12px;
+				padding: 0 40px;
+			}
+
+			.btn {
+				display: inline-block;
+				color: white;
+				border: none;
+				padding: 8px 12px;
+				font-weight: 700;
+				cursor: pointer;
+				background-color: #3e0ab8;
+			}
+
+			.btn:last-child {
+				background-color: #c62537;
+				margin-left: auto;
+			}
+
+			.scrollbox {
+				overflow: auto;
+				visibility: hidden;
+			}
+
+			.scrollbox:hover,
+			.scrollbox:focus {
+				visibility: visible;
+			}
+
+			.scrollbox-delayed {
+				transition: visibility 0.5s ease-in-out 0.2s;
+			}
+
+			.scrollbox-delayed:hover {
+				transition: visibility 0.5s ease-in-out 0.2s;
+			}
+
+			.email-list {
+				background-color: #c5c3c6;
+				display: flex;
+				flex-direction: column;
+				/* overflow-y: scroll; */
+				visibility: visible;
+				gap: 40px;
+				padding: 40px;
+			}
+
+			.email-preview {
+				border: none;
+				background-color: #fff;
+				/* padding: 40px 0; */
+				height: 96px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-shrink: 0;
+			}
+
+			.additional-info {
+				background-color: #e9ecef;
+				display: flex;
+				justify-content: center;
+			}
+
+			.email-view {
+				display: flex;
+				justify-content: center;
+			}
+
+			.info-header {
+				display: block;
+				margin-top: 24px;
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="app">
+			<nav class="navbar"><span class="info-header">Nav</span></nav>
+			<menu class="controls">
+				<button class="btn">New</button>
+				<button class="btn">Reply</button>
+				<button class="btn">Forward</button>
+				<button class="btn">Mark unread</button>
+				<button class="btn">Trash</button>
+			</menu>
+
+			<div class="scrollbox scrollbox-delayed">
+				<section class="email-list">
+					<div class="email-preview">Email 1</div>
+					<div class="email-preview">Email 2</div>
+					<div class="email-preview">Email 3</div>
+					<div class="email-preview">Email 4</div>
+					<div class="email-preview">Email 5</div>
+					<div class="email-preview">Email 6</div>
+					<div class="email-preview">Email 7</div>
+					<div class="email-preview">Email 8</div>
+				</section>
+			</div>
+
+			<main class="email-view">
+				<span class="info-header">Email view</span>
+			</main>
+
+			<aside class="additional-info">
+				<span class="info-header">Additional Info</span>
+			</aside>
+		</div>
+	</body>
+</html>

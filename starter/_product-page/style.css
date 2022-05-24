@@ -4,31 +4,34 @@
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+	/* 	font: inherit; */
+	/* 	vertical-align: baseline; */
 	font-family: sans-serif;
+	box-sizing: border-box;
 }
 
 body {
 	line-height: 1.5;
 }
 
-/* Product */
-
 p {
 	margin-bottom: 10px;
+	font-size: 15px;
 }
 
 .product {
+	display: grid;
+	grid-template-columns: 250px 1fr 1fr;
+	column-gap: 40px;
 	border: 5px solid #000;
 	width: 825px;
 	margin: 50px auto;
 	position: relative;
-	font-weight: bold;
 	font-size: 13px;
 }
 
 .product-name {
+	grid-column: 1 / -1;
 	text-align: center;
 	background-color: #f1f3f3;
 	text-transform: uppercase;
@@ -37,13 +40,44 @@ p {
 	padding: 15px 0;
 }
 
+.button-container {
+	grid-column: 1 / -1;
+}
+
 .main-image {
+	width: 250px;
 	height: 250px;
+}
+
+.main-info-container {
+	margin-top: 20px;
+}
+
+.product-details-container {
+	margin-top: 20px;
+}
+
+/* Product */
+
+.price-shipping-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 15px;
 }
 
 .price {
 	font-size: 24px;
 	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.shipping {
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #777;
+	font-size: 12px;
+	margin-bottom: 0px;
 }
 
 .sale {
@@ -59,12 +93,8 @@ p {
 	left: -36px;
 }
 
-.shipping {
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #777;
-	font-size: 12px;
-	margin-bottom: 20px;
+.more-info {
+	font-size: 15px;
 }
 
 .more-info:link,
@@ -81,15 +111,14 @@ p {
 /* Colors */
 
 .colors {
+	display: flex;
+	gap: 10px;
 	margin-top: 30px;
-	font-size: 0;
 }
 
 .color {
 	width: 25px;
 	height: 25px;
-	display: inline-block;
-	margin-right: 15px;
 }
 
 .color-black {
@@ -120,19 +149,24 @@ p {
 
 .product-details-title {
 	text-transform: uppercase;
-	margin-top: 30px;
-	margin-bottom: 15px;
+	font-size: 15px;
+	margin-bottom: 0px;
 	font-weight: bold;
+}
+
+.summary {
+	clear: both;
 }
 
 .characteristics {
 	list-style-type: square;
-	margin-left: 20px;
-	margin-bottom: 10px;
+	margin-top:15px;
+	margin-left: 15px;
 }
 
 .characteristics li {
 	margin-bottom: 10px;
+	font-size: 15px;
 }
 
 .characteristics li:last-child {
